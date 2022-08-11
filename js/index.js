@@ -21,19 +21,25 @@ if (hacker1.length > hacker2.length) {
 
 
 // Iteration 3: Loops
-//3.3 Depending on the lexicographic order of the strings, print:
-//- The driver's name goes first.
-//- Yo, the navigator goes first definitely.
-//- What?! You both have the same name?
 
+const driveUpp = hacker1.toUpperCase();
+console.log(driveUpp.split('')); 
+const driveSplit = driveUpp.split('');
+console.log(driveSplit.join(' '));
+const naviSplit = hacker2.split('');
+const naviHack2 = naviSplit.reverse('');
+console.log(naviHack2.join(''));
 
-const driveUpp = hacker1.toUpperCase()
-console.log(driveUpp.split('')) 
-const driveSplit = driveUpp.split('')
-console.log(driveSplit.join(' '))
-const naviSplit = hacker2.split('')
-const naviHack2 = naviSplit.reverse('')
-console.log(naviHack2.join(''))
+if  (hacker1<hacker2) {                                         // Compara as strings lexicalmente. Se hacker1 é menor então executa.
+    console.log(`The driver's name goes first.`);               // Retorna a variavel hacker1.
+} else if (hacker1>hacker2) {                                   // Compara as strings lexicalmente. Se hacker1 é maior então executa.
+    console.log(`Yo, the navigator goes first definitely.`)
+} else {                                                        // Sem pestanejar, aceita qualquer coisa e retorna abaixo.
+    console.log(`What?! You both have the same name?`)
+}
+
+// Há possibilidade de usar comando locale.compare
+
 
 
 
